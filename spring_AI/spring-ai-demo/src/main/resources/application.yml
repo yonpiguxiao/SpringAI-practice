@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: spring-ai-demo
+  ai:
+    openai:
+#      #openai
+<<<<<<< HEAD
+#      api-key:
+      #deepseek
+      api-key:
+=======
+#      api-key: ${OPEN_AI_API_KEY}
+
+      #deepseek
+      api-key: ${DEEPSEEK_API_KEY}
+>>>>>>> 9ad1755 (commit)
+      base-url: https://api.deepseek.com
+      chat:
+        options:
+          model: deepseek-chat
+          temperature: 1.0
+logging:
+  level:
+    org.springframework.ai.chat.client.advisor: debug
+  pattern:
+    console: '%d{HH:mm:ss.SSS} %c %M %L [%thread] %m%n'
+    file: '%d{HH:mm:ss.SS} %c %M %L [%thread] %m%n'

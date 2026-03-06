@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: my-spring-chat-bot
+  ai:
+    openai:
+      api-key: sk-ecfffa79473e405db27c424aef666a15
+      base-url: https://api.deepseek.com
+      chat:
+        options:
+          model: deepseek-chat
+          temperature: 1.0
+#    ollama:
+#      base-url: http://127.0.0.1:11434 #本地
+#      chat:
+#        model: deepseek-r1:1.5b
+logging:
+  level:
+    org.springframework.ai.chat.client.advisor: debug
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+    file: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"

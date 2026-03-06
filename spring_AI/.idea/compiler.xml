@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-chat-bot" />
+        <module name="spring-ai-demo" />
+        <module name="mcp-stdio-server-demo" />
+        <module name="spring-qianfan-demo" />
+        <module name="spring-alibaba-demo" />
+        <module name="rag-demo" />
+        <module name="mcp-sse-server-demo" />
+        <module name="spring-ai-alibaba" />
+        <module name="mcp-client-demo" />
+        <module name="spring-image-demo" />
+        <module name="my-spring-chat-bot" />
+        <module name="spring-ollama-demo" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mcp-stdio-server-demo (1)" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="mcp-client-demo" options="-parameters" />
+      <module name="mcp-sse-server-demo" options="-parameters" />
+      <module name="mcp-stdio-server-demo" options="-parameters" />
+      <module name="mcp-stdio-server-demo (1)" options="-parameters" />
+      <module name="my-spring-chat-bot" options="-parameters" />
+      <module name="rag-demo" options="-parameters" />
+      <module name="spring-ai-alibaba" options="-parameters" />
+      <module name="spring-ai-demo" options="-parameters" />
+      <module name="spring-ai-project" options="-parameters" />
+      <module name="spring-alibaba-demo" options="-parameters" />
+      <module name="spring-chat-bot" options="-parameters" />
+      <module name="spring-image-demo" options="-parameters" />
+      <module name="spring-ollama-demo" options="-parameters" />
+      <module name="spring-qianfan-demo" options="-parameters" />
+    </option>
+  </component>
+</project>

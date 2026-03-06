@@ -1,0 +1,14 @@
+spring:
+  ai:
+    openai:
+      api-key: ${QIANFAN_API_KEY}
+      base-url: https://qianfan.baidubce.com
+      chat:
+        options:
+          model: "ernie-char-8k"
+          temperature: 0.7
+        completions-path: /v2/chat/completions
+      image:
+        options:
+          model: "flux.1-schnell"
+        imagesPath: /v2/images/generations

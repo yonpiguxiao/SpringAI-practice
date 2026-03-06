@@ -1,0 +1,13 @@
+spring:
+  ai:
+    dashscope:
+      api-key: ${DASHSCOPE_API_KEY}
+      image:
+        options:
+          model: wan2.2-t2i-flash
+          n: 4
+      audio:
+        synthesis:
+          options:
+            model: "cosyvoice-v2"
+            voice: longanqin

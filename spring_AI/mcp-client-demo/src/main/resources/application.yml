@@ -1,0 +1,22 @@
+spring:
+  ai:
+    dashscope:
+      api-key: ${DASHSCOPE_API_KEY}
+    mcp:
+      client:
+        request-timeout: 60000
+#        stdio:
+#          servers-configuration: classpath:/mcp/mcp-servers-config.json
+        sse:
+          connections:
+            user-info:
+              url: http://127.0.0.1:8088/sse
+#      image:
+#        options:
+#          model: wan2.2-t2i-flash
+#          n: 4
+#      audio:
+#        synthesis:
+#          options:
+#            model: "cosyvoice-v2"
+#            voice: longanqin
