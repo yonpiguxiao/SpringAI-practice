@@ -21,6 +21,8 @@
         <module>mcp-sse-server-demo</module>
         <module>rag-demo</module>
         <module>agents-demo</module>
+        <module>spring</module>
+        <module>spring-observability-demo</module>
     </modules>
 
     <packaging>pom</packaging>

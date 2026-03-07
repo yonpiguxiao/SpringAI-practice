@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spring-observability-demo" />
         <module name="spring-qianfan-demo" />
         <module name="spring-ai-alibaba" />
         <module name="mcp-client-demo" />
@@ -23,6 +24,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="mcp-stdio-server-demo (1)" target="17" />
+      <module name="spring" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -40,6 +42,7 @@
       <module name="spring-alibaba-demo" options="-parameters" />
       <module name="spring-chat-bot" options="-parameters" />
       <module name="spring-image-demo" options="-parameters" />
+      <module name="spring-observability-demo" options="-parameters" />
       <module name="spring-ollama-demo" options="-parameters" />
       <module name="spring-qianfan-demo" options="-parameters" />
     </option>
