@@ -1,0 +1,16 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: chat-bot-service
+  ai:
+    dashscope:
+      api-key: ${DASHSCOPE_API_KEY}
+      embedding:
+        options:
+          model: text-embedding-v3
+logging:
+  level:
+    org.springframework.ai.chat.client.advisor: debug
+  pattern:
+    console: "%d{HH:mm:ss.SSS} %5p ${PID:- } --- [%15.15t] %-40.40logger{39} : %m%n%wEx"
