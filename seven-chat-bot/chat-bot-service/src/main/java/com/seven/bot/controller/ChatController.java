@@ -24,8 +24,11 @@ public class ChatController {
     @Autowired
     private ChatMemory chatMemory;
 
+//    @Autowired
+//    private ChatHistoryRepository memoryChatHistoryRepository;
+
     @Autowired
-    private ChatHistoryRepository memoryChatHistoryRepository;
+    private ChatHistoryRepository MysqlChatHistoryRepository;
 
 
     public ChatController(ChatClient chatClient) {
@@ -35,9 +38,10 @@ public class ChatController {
     @RequestMapping(value = "/stream", produces = "text/html;charset=utf-8")
     public Flux<String> stream(String prompt, String chatId){
         log.info("chatId:{}, prompt:{}", chatId, prompt);
-        memoryChatHistoryRepository.save(chatId, prompt);
+        MysqlChatHistoryRepository.save(chatId, prompt);
         return this.chatClient.prompt()
                 .user(prompt)
+                .system(build -> build.text("当前的会话ID: %s".formatted(chatId)))
                 .advisors(spec -> spec.param(ChatMemory.CONVERSATION_ID, chatId))
                 .stream()
                 .content();
@@ -49,7 +53,7 @@ public class ChatController {
      */
     @RequestMapping("/getChatIds")
     public List<ChatInfo> getChatIds(){
-        return memoryChatHistoryRepository.getChats();
+        return MysqlChatHistoryRepository.getChats();
     }
 
     /**
@@ -72,7 +76,7 @@ public class ChatController {
     public Boolean deleteChat(String chatId){
         log.info("删除会话, chatId:{}", chatId);
         try {
-            memoryChatHistoryRepository.clearByChatId(chatId);
+            MysqlChatHistoryRepository.clearByChatId(chatId);
             chatMemory.clear(chatId);
         }catch (Exception e){
             log.error("删除会话失败, chatId:{}", chatId);

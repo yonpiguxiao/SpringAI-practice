@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "ticket-service": {
+      "command": "java",
+      "args": [
+        "-Dspring.ai.mcp.server.stdio=true",
+        "-Dlogging.pattern.console=",
+        "-Dfile.encoding=UTF-8",
+        "-jar",
+        "D:\\SpringAI-practice\\seven-chat-bot\\ticket-service\\target\\ticket-service-1.0-SNAPSHOT.jar"
+      ]
+    }
+  }
+}
